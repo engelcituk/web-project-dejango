@@ -14,3 +14,7 @@ class Usuario(models.Model):
     profesion = models.CharField(max_length=100)
     genero = models.CharField( choices = genero_eleccion, max_length=100)
     ciudad = models.CharField(max_length=100)
+    
+    #Para mostrar el usuario en el admin por una propiedad en especifico 
+    def __str__(self):
+        return self.nombre
